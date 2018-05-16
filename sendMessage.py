@@ -24,19 +24,10 @@ def sendMessages(image):
     msg['To'] = sendToNumber
     msg['Subject'] = "Unauthrized User"
     body = time.strftime('%c') + "\nYour system is used! "
-
-    #imageSize = Image.open(cam.saveImageName)
-    #imageReSize = imageSize.resize((500,300), Image.ANTIALIAS)
-    #imageReSize.save('image22.jpg', quality=100)
-
-    #time.sleep(1)
     newImage = 'image22.jpg'
-
-    #attachment =
     cv2.imwrite(newImage, image)
     attachment = open(newImage, "rb")
     #message size exceeds fixed maximum message size
-
     part = MIMEBase('application', 'octet-stream')
     part.set_payload((attachment).read())
     encoders.encode_base64(part)
@@ -51,17 +42,7 @@ def sendMessages(image):
     server.ehlo()
     maxLimit = int(server.esmtp_features['size'])
     print(maxLimit)
-    time.sleep(20) # trying 10s
+    time.sleep(20)
     readMessage.loopReadingEmail()
-    time.sleep(80) # tried 60
+    time.sleep(80) 
     server.quit()
-    #print ('sent')
-    #readMessage.loopReadingEmail()
-
-
-#if __name__ == "__main__":
-#     pass
-     #sendMessages()
-#     a.sendMessages()
-
-        # sendThisImage = recamear('.jpg')
