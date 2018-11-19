@@ -12,7 +12,7 @@ import readMessage
 #class SendMessage(object):
 emailId = 'pyimagecv@gmail.com'
 sendToNumber = "2013609973@mms.att.net"
-emailPass = "123456789a!"
+emailPass = "yourEmailpass"
 
 
 # sendThisImage= recamear('.jpg')
