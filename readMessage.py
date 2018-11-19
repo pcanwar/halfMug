@@ -7,7 +7,7 @@ import subprocess
 
 def loopReadingEmail():
     emailID = "pyimagecv@gmail.com"
-    emailPass = "123456789a!"
+    emailPass = "YourEmailPass"
     connMail = imaplib.IMAP4_SSL('imap.gmail.com')
     connMail.login(emailID, emailPass)
     connMail.list()
